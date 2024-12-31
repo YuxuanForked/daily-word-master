@@ -121,17 +121,6 @@ const Learn = () => {
     }
   };
 
-  // 添加切换单词的函数
-  const handlePrevWord = () => {
-    setCurrentPage((prev) => Math.max(0, prev - 1));
-  };
-
-  const handleNextWord = () => {
-    if (dailyWords) {
-      setCurrentPage((prev) => Math.min(dailyWords.words.length - 1, prev + 1));
-    }
-  };
-
   // 获取当前页的单词
   const getCurrentPageWords = () => {
     if (!dailyWords || !dailyWords.words) return [];
